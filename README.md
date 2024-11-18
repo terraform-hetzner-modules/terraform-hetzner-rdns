@@ -12,11 +12,12 @@ module "hetzner_server_apache" {
 ```
 
 <!-- BEGIN_TF_DOCS -->
+
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | ~> 1.49 |
+| Name                                                      | Version |
+| --------------------------------------------------------- | ------- |
+| <a name="provider_hcloud"></a> [hcloud](#provider_hcloud) | ~> 1.49 |
 
 ## Modules
 
@@ -24,21 +25,22 @@ No modules.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_entries"></a> [entries](#input\_entries) | The rDNS entries to manage. | `any` | `{}` | no |
+| Name                                                   | Description                 | Type  | Default | Required |
+| ------------------------------------------------------ | --------------------------- | ----- | ------- | :------: |
+| <a name="input_entries"></a> [entries](#input_entries) | The rDNS entries to manage. | `any` | `{}`    |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_dns_ptr"></a> [dns\_ptr](#output\_dns\_ptr) | The Hetzner Cloud DNS pointer for the IP address. |
-| <a name="output_floating_ip_id"></a> [floating\_ip\_id](#output\_floating\_ip\_id) | The unique ID for the floating IP the IP address belongs to. |
-| <a name="output_id"></a> [id](#output\_id) | The unique ID of the Hetzner Cloud reverse DNS entry. |
-| <a name="output_ip_address"></a> [ip\_address](#output\_ip\_address) | The IP address the Hetzner Cloud DNS entry should point to. |
-| <a name="output_load_balancer_id"></a> [load\_balancer\_id](#output\_load\_balancer\_id) | The unique ID for the load balancer the IP address belongs to. |
-| <a name="output_primary_ip_id"></a> [primary\_ip\_id](#output\_primary\_ip\_id) | The unique ID for the primary IP the IP address belongs to. |
-| <a name="output_server_id"></a> [server\_id](#output\_server\_id) | The unique ID for the server the IP address belongs to. |
+| Name                                                                                | Description                                                    |
+| ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| <a name="output_dns_ptr"></a> [dns_ptr](#output_dns_ptr)                            | The Hetzner Cloud DNS pointer for the IP address.              |
+| <a name="output_floating_ip_id"></a> [floating_ip_id](#output_floating_ip_id)       | The unique ID for the floating IP the IP address belongs to.   |
+| <a name="output_id"></a> [id](#output_id)                                           | The unique ID of the Hetzner Cloud reverse DNS entry.          |
+| <a name="output_ip_address"></a> [ip_address](#output_ip_address)                   | The IP address the Hetzner Cloud DNS entry should point to.    |
+| <a name="output_load_balancer_id"></a> [load_balancer_id](#output_load_balancer_id) | The unique ID for the load balancer the IP address belongs to. |
+| <a name="output_primary_ip_id"></a> [primary_ip_id](#output_primary_ip_id)          | The unique ID for the primary IP the IP address belongs to.    |
+| <a name="output_server_id"></a> [server_id](#output_server_id)                      | The unique ID for the server the IP address belongs to.        |
+
 <!-- END_TF_DOCS -->
 
 ### 🔃 Contributing
