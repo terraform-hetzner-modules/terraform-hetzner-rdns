@@ -1,18 +1,44 @@
-# _Hetzner Cloud_ - MODULE <img src="https://avatars.githubusercontent.com/u/140525456?s=200&v=4" alt="FMJ Studios Logo" align="right" width="128"/> <img src="https://raw.githubusercontent.com/fmjstudios/artwork/refs/heads/main/projects/terraform/icon/color/terraform-icon-color.png" alt="Terraform Logo" align="right" width="128"/>
+# _Hetzner Cloud_ - rDNS <img src="https://avatars.githubusercontent.com/u/30047064?s=200&v=4" alt="Hetzner Logo" align="right" width="128"/> <img src="https://raw.githubusercontent.com/fmjstudios/artwork/refs/heads/main/projects/terraform/icon/color/terraform-icon-color.png" alt="Terraform Logo" align="right" width="128"/>
 
-A [Terraform module][module] to ...
+A [Terraform module][module] to create and manage reverse-DNS entries for your [Hetzner Cloud][hetzner] servers.
 
 ## ✨ TL;DR
 
 ```shell
 module "hetzner_server_apache" {
-  source = "terraform-hetzner-modules/cloud/server"
+  source = "terraform-hetzner-modules/cloud/rdns"
   ...
 }
 ```
 
 <!-- BEGIN_TF_DOCS -->
+## Providers
 
+| Name | Version |
+|------|---------|
+| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | ~> 1.49 |
+
+## Modules
+
+No modules.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_entries"></a> [entries](#input\_entries) | The rDNS entries to manage. | `any` | `{}` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_dns_ptr"></a> [dns\_ptr](#output\_dns\_ptr) | The Hetzner Cloud DNS pointer for the IP address. |
+| <a name="output_floating_ip_id"></a> [floating\_ip\_id](#output\_floating\_ip\_id) | The unique ID for the floating IP the IP address belongs to. |
+| <a name="output_id"></a> [id](#output\_id) | The unique ID of the Hetzner Cloud reverse DNS entry. |
+| <a name="output_ip_address"></a> [ip\_address](#output\_ip\_address) | The IP address the Hetzner Cloud DNS entry should point to. |
+| <a name="output_load_balancer_id"></a> [load\_balancer\_id](#output\_load\_balancer\_id) | The unique ID for the load balancer the IP address belongs to. |
+| <a name="output_primary_ip_id"></a> [primary\_ip\_id](#output\_primary\_ip\_id) | The unique ID for the primary IP the IP address belongs to. |
+| <a name="output_server_id"></a> [server\_id](#output\_server\_id) | The unique ID for the server the IP address belongs to. |
 <!-- END_TF_DOCS -->
 
 ### 🔃 Contributing
@@ -45,6 +71,7 @@ for more information. You may also use the linked contact details to reach out d
 
 [org]: https://github.com/fmjstudios
 [hashicorp]: https://www.hashicorp.com/
+[hetzner]: https://hetzner.com
 
 <!-- Third-party -->
 
