@@ -16,7 +16,7 @@ module "hetzner_server_apache" {
 ## Providers
 
 | Name                                                      | Version |
-| --------------------------------------------------------- | ------- |
+|-----------------------------------------------------------|---------|
 | <a name="provider_hcloud"></a> [hcloud](#provider_hcloud) | ~> 1.49 |
 
 ## Modules
@@ -26,13 +26,13 @@ No modules.
 ## Inputs
 
 | Name                                                   | Description                 | Type  | Default | Required |
-| ------------------------------------------------------ | --------------------------- | ----- | ------- | :------: |
+|--------------------------------------------------------|-----------------------------|-------|---------|:--------:|
 | <a name="input_entries"></a> [entries](#input_entries) | The rDNS entries to manage. | `any` | `{}`    |    no    |
 
 ## Outputs
 
 | Name                                                                                | Description                                                    |
-| ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+|-------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | <a name="output_dns_ptr"></a> [dns_ptr](#output_dns_ptr)                            | The Hetzner Cloud DNS pointer for the IP address.              |
 | <a name="output_floating_ip_id"></a> [floating_ip_id](#output_floating_ip_id)       | The unique ID for the floating IP the IP address belongs to.   |
 | <a name="output_id"></a> [id](#output_id)                                           | The unique ID of the Hetzner Cloud reverse DNS entry.          |
@@ -55,7 +55,7 @@ for more information. You may also use the linked contact details to reach out d
 
 ### ©️ Copyright
 
-- _Assets provided by:_ **[HashCorp][hashicorp]**
+- _Assets provided by:_ **[HashiCorp][hashicorp]**
 - _Sources provided by:_ **[FMJ Studios][org]** under the **[MIT License][license]**
 
 <!-- INTERNAL REFERENCES -->
