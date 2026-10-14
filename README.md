@@ -20,9 +20,20 @@ A [Terraform module][module] to create and manage reverse-DNS entries for your [
 ## ✨ TL;DR
 
 ```hcl
-module "hetzner_rdns_apache" {
+data "hcloud_server" "web" {
+  name = "web-01"
+}
+
+module "rdns" {
   source = "terraform-hetzner-modules/rdns/hetzner"
-  ...
+
+  entries = {
+    web = {
+      dns_ptr    = "web.example.com"
+      ip_address = data.hcloud_server.web.ipv4_address
+      server_id  = data.hcloud_server.web.id
+    }
+  }
 }
 ```
 
