@@ -1,5 +1,5 @@
 module "rdns_example" {
-  source = ".."
+  source = "../.."
 
   entries = {
     node1 = {
@@ -12,6 +12,7 @@ module "rdns_example" {
 
 resource "hcloud_server" "node1" {
   name        = "node1"
-  image       = "debian-11"
-  server_type = "cx11"
+  image       = "debian-13"
+  server_type = "cx23"
+  location    = "fsn1"
 }

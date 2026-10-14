@@ -1,5 +1,5 @@
 module "rdns_example" {
-  source = ".."
+  source = "../.."
 
   entries = {
     node1 = {
@@ -30,8 +30,9 @@ module "rdns_example" {
 
 resource "hcloud_server" "node1" {
   name        = "node1"
-  image       = "debian-11"
-  server_type = "cx11"
+  image       = "debian-13"
+  server_type = "cx23"
+  location    = "fsn1"
 }
 
 resource "hcloud_floating_ip" "floating1" {
@@ -40,11 +41,11 @@ resource "hcloud_floating_ip" "floating1" {
 }
 
 resource "hcloud_primary_ip" "primary1" {
-  datacenter = "nbg1-dc3"
-  type       = "ipv4"
+  name     = "rdns-example-primary"
+  location = "nbg1"
+  type     = "ipv4"
 
-  auto_delete   = true
-  assignee_type = "server"
+  auto_delete = true
 }
 
 resource "hcloud_load_balancer" "load_balancer1" {
